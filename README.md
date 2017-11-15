@@ -14,7 +14,7 @@ $ npm install --save osm-geojson
 ```js
 const osmGeoJson = require('osm-geojson');
 
-osmGeoJson.get('365331');
+osmGeoJson.get('365331'); // Italy 
 // => { type: 'GeometryCollection', geometries: [ { type: 'MultiPolygon', coordinates: [Array] } ] }
 ```
 
