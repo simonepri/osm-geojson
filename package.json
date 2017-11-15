@@ -1,0 +1,60 @@
+{
+  "name": "osm-geojson",
+  "version": "0.5.0",
+  "description": "Get GeoJSON of a OpenStreetMap's relation from the API..",
+  "main": "index.js",
+  "dependencies": {
+    "pify": "^3.0.0",
+    "random-int": "^1.0.0",
+    "request": "^2.83.0",
+    "wait-then": "^0.1.2"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "codecov": "^3.0.0",
+    "nyc": "^11.3.0",
+    "xo": "^0.19.0"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonepri/osm-geojson.git"
+  },
+  "author": {
+    "name": "Simone Primarosa",
+    "email": "simone.pri@hotmail.it"
+  },
+  "keywords": [
+    "osm-api",
+    "osm-geojson",
+    "relation",
+    "relations",
+    "convert",
+    "converts",
+    "to",
+    "from",
+    "country",
+    "countries",
+    "get",
+    "code",
+    "which",
+    "alpha-3",
+    "ISO 3166-1",
+    "OSM",
+    "geo",
+    "api",
+    "geojson",
+    "OpenStreetMap"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonepri/osm-geojson/issues"
+  },
+  "homepage": "https://github.com/simonepri/osm-geojson#readme",
+  "xo": {
+    "space": true
+  }
+}
