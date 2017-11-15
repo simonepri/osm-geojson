@@ -1,7 +1,7 @@
 {
   "name": "osm-geojson",
   "version": "0.5.0",
-  "description": "Get GeoJSON of a OpenStreetMap's relation from the API..",
+  "description": "Get GeoJSON of a OpenStreetMap's relation from the API.",
   "main": "index.js",
   "dependencies": {
     "pify": "^3.0.0",
