@@ -1,0 +1,17 @@
+#tests
+test.js
+
+#build tools
+.travis.yml
+codecov.yml
+
+#editor settings
+.editorconfig
+
+#github
+.gitattributes
+.gitignore
+code_of_conduct.md
+
+#media
+media
