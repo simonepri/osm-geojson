@@ -14,23 +14,35 @@ $ npm install --save osm-geojson
 ```js
 const osmGeoJson = require('osm-geojson');
 
-osmGeoJson.get('365331'); // Italy 
+osmGeoJson.get('365331'); // Italy
 // => { type: 'GeometryCollection', geometries: [ { type: 'MultiPolygon', coordinates: [Array] } ] }
 ```
 
 ## API
 
-<a name="getGeoJson"></a>
+<a name="get"></a>
 
-## getGeoJson(osmid) ⇒ <code>Promise.&lt;object&gt;</code>
+## get(osmid) ⇒ <code>Promise.&lt;object&gt;</code>
 Returns the GeoJSON of a particular OSM relation id.
 
 **Returns**: <code>Promise.&lt;object&gt;</code> - A promise that contains the GeoJSON of the given
-relation.    
+relation.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | osmid | <code>string</code> | Relation id from which extract the GeoJSON. |
+
+<a name="getAll"></a>
+
+## getAll(map) ⇒ <code>Promise.&lt;object&gt;</code>
+Returns a map of GeoJSON of multiple OSM relation ids.
+
+**Returns**: <code>Promise.&lt;object&gt;</code> - A promise that contains the map with the same keys
+of the map provided but with the GeoJSON of the given relation id as value.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| map | <code>object</code> | Map from a name to a relation id from which extract the GeoJSON. |
 
 ## Authors
 * **Simone Primarosa** - [simonepri](https://github.com/simonepri)
