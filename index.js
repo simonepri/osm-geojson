@@ -64,7 +64,40 @@ function getGeoJson(osmid) {
       });
   });
 }
+/**
+ * Returns a map of GeoJSON of multiple OSM relation ids.
+ * @public
+ * @param  {object} map Map from a name to a relation id from which extract the GeoJSON.
+ * @return {Promise<object>} A promise that contains the map with the same keys
+ * of the map provided but with the GeoJSON of the given relation id as value.
+ */
+function getAllGeoJson(map) {
+  const promises = [];
+  const geojsonMap = {};
+
+  for (const country of Object.keys(map)) {
+    promises.push(
+      new Promise((resolve, reject) => {
+        getGeoJson(map[country])
+          .then(geoJson => {
+            geojsonMap[country] = geoJson;
+            resolve();
+          })
+          .catch(reject);
+      })
+    );
+  }
+
+  return new Promise((resolve, reject) => {
+    Promise.all(promises)
+      .then(() => {
+        resolve(geojsonMap);
+      })
+      .catch(reject);
+  });
+}
 
 module.exports = {
-  get: getGeoJson
+  get: getGeoJson,
+  getAll: getAllGeoJson
 };
