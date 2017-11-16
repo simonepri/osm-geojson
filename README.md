@@ -16,6 +16,12 @@ const osmGeoJson = require('osm-geojson');
 
 osmGeoJson.get('365331'); // Italy
 // => { type: 'GeometryCollection', geometries: [ { type: 'MultiPolygon', coordinates: [Array] } ] }
+
+osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
+// => {
+// 'ITA': { type: 'GeometryCollection', geometries: [ { type: 'MultiPolygon', coordinates: [Array] } ] },
+// 'USA': { type: 'GeometryCollection', geometries: [ { type: 'MultiPolygon', coordinates: [Array] } ] }
+// }
 ```
 
 ## API
