@@ -1,4 +1,6 @@
 # osm-geojson
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonepri/osm-geojson.svg)](https://greenkeeper.io/)
 [![Travis CI](https://travis-ci.org/simonepri/osm-geojson.svg?branch=master)](https://travis-ci.org/simonepri/osm-geojson) [![Codecov](https://img.shields.io/codecov/c/github/simonepri/osm-geojson/master.svg)](https://codecov.io/gh/simonepri/osm-geojson) [![npm](https://img.shields.io/npm/dm/osm-geojson.svg)](https://www.npmjs.com/package/osm-geojson) [![npm version](https://img.shields.io/npm/v/osm-geojson.svg)](https://www.npmjs.com/package/osm-geojson) [![npm dependencies](https://david-dm.org/simonepri/osm-geojson.svg)](https://david-dm.org/simonepri/osm-geojson) [![npm dev dependencies](https://david-dm.org/simonepri/osm-geojson/dev-status.svg)](https://david-dm.org/simonepri/osm-geojson#info=devDependencies)
 
 > 🔰 Get GeoJSON of a OpenStreetMap's relation from the API.
