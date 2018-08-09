@@ -11,7 +11,8 @@
   },
   "author": "Simone Primarosa <simonepri@outlook.com> (https://simoneprimarosa.com)",
   "contributors": [
-    "Simone Primarosa <simonepri@outlook.com> (https://simoneprimarosa.com)"
+    "Simone Primarosa <simonepri@outlook.com> (https://simoneprimarosa.com)",
+    "Andrew Harvey <andrew@alantgeo.com.au> (https://www.alantgeo.com.au)"
   ],
   "keywords": [
     "osm-api",
@@ -40,7 +41,8 @@
     "osm-geojson": "./cli.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "engines": {
     "node": ">=6"
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "ava": "*",
+    "execa": "^0.10.0",
     "np": "*",
     "npm-check": "*",
     "nyc": "*",

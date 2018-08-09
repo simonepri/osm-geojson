@@ -2,12 +2,12 @@
 
 'use strict';
 
-const osmGeoJson = require('./index.js');
 const fs = require('fs');
+const osmGeoJson = require('.');
 
-const argv = { _: [] };
+const argv = {_: []};
 
-process.argv.slice(2).forEach((arg) => {
+process.argv.slice(2).forEach(arg => {
   switch (arg) {
     case '-h':
     case '--help':
@@ -16,7 +16,6 @@ process.argv.slice(2).forEach((arg) => {
       console.log('   -h --help Show usage');
       console.log('   -p --pretty-print Pretty print GeoJSON');
       process.exit();
-      break;
 
     case '-p':
     case '--pretty-print':
@@ -29,19 +28,25 @@ process.argv.slice(2).forEach((arg) => {
       }
       break;
   }
-})
+});
 
-argv._.forEach((task) => {
-  let [relation, file] =  task.split(':')
-  osmGeoJson.get(relation)
-    .then((geojson) => {
-      const geojsonString = argv['pretty-print'] ? JSON.stringify(geojson, null, 2) : JSON.stringify(geojson);
+argv._.forEach(task => {
+  const [relation, file] = task.split(':');
+  osmGeoJson.get(relation).then(
+    geojson => {
+      const geojsonString = argv['pretty-print']
+        ? JSON.stringify(geojson, null, 2)
+        : JSON.stringify(geojson);
       if (file === '-') {
-        process.stdout.write(geojsonString)
+        process.stdout.write(geojsonString);
       } else {
-        fs.writeFile(file, geojsonString, (err) => {
+        fs.writeFile(file, geojsonString, err => {
           if (err) throw err;
-        })
+        });
       }
-    }, (err) => { console.error(err) ; })
+    },
+    err => {
+      console.error(err);
+    }
+  );
 });

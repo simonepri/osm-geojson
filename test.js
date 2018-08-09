@@ -1,4 +1,5 @@
 import test from 'ava';
+import execa from 'execa';
 import m from '.';
 
 test('should return the geojson for a valid relation id', async t => {
@@ -35,4 +36,9 @@ test('should return an empty map with an empty map', async t => {
 test('should return an error for an invalid relation id', async t => {
   const error = await t.throws(m.get('XXX'), Error);
   t.is(error.message, 'Unable to get response for the relation: XXX');
+});
+
+test('cli', async t => {
+  const {stdout} = await execa('./cli.js', ['365331:-']);
+  t.is(JSON.parse(stdout).type, 'GeometryCollection');
 });
