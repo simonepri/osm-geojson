@@ -125,10 +125,10 @@ This project is licensed under the MIT License - see the [license][license] file
 
 
 <!-- Links -->
-[start]: https://github.com/simonepri/phc-argon2#start-of-content
-[contributors]: https://github.com/simonepri/phc-argon2/contributors
+[start]: https://github.com/simonepri/osm-geojson#start-of-content
+[contributors]: https://github.com/simonepri/osm-geojson/contributors
 
-[license]: https://github.com/simonepri/phc-argon2/tree/master/license
+[license]: https://github.com/simonepri/osm-geojson/tree/master/license
 
 [github:simonepri]: https://github.com/simonepri
 [twitter:simoneprimarosa]: http://twitter.com/intent/user?screen_name=simoneprimarosa
