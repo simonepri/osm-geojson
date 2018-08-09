@@ -36,6 +36,9 @@
     "OpenStreetMap"
   ],
   "main": "index.js",
+  "bin": {
+    "osm-geojson": "./cli.js"
+  },
   "files": [
     "index.js"
   ],

@@ -95,7 +95,7 @@ osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
 Returns the GeoJSON of a particular OSM relation id.
 
 **Returns**: <code>Promise.&lt;object&gt;</code> - A promise that contains the GeoJSON of the given
-relation.  
+relation.
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -107,11 +107,17 @@ relation.
 Returns a map of GeoJSON of multiple OSM relation ids.
 
 **Returns**: <code>Promise.&lt;object&gt;</code> - A promise that contains the map with the same keys
-of the map provided but with the GeoJSON of the given relation id as value.  
+of the map provided but with the GeoJSON of the given relation id as value.
 
 | Param | Type | Description |
 | --- | --- | --- |
 | map | <code>object</code> | Map from a name to a relation id from which extract the GeoJSON. |
+
+## CLI
+
+```
+$ osm-geojson osmid:file.geojson
+```
 
 ## Authors
 
