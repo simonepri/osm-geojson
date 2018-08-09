@@ -5,7 +5,8 @@ const pify = require('pify');
 const wait = require('wait-then');
 const rand = require('random-int');
 
-const API_GET_GEO = 'http://polygons.openstreetmap.fr/get_geojson.py?params=0&id=';
+const API_GET_GEO =
+  'http://polygons.openstreetmap.fr/get_geojson.py?params=0&id=';
 
 let last = null;
 
@@ -38,8 +39,15 @@ function getGeoJson(osmid) {
         return pify(request)(opts);
       })
       .then(response => {
-        if (!response || !response.body || response.body.substr(0, 4) === 'None' || response.statusCode === 500) {
-          reject(new Error('Unable to get response for the relation: ' + osmid));
+        if (
+          !response ||
+          !response.body ||
+          response.body.substr(0, 4) === 'None' ||
+          response.statusCode === 500
+        ) {
+          reject(
+            new Error('Unable to get response for the relation: ' + osmid)
+          );
           return;
         }
         if (response.statusCode !== 200) {
