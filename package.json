@@ -2,31 +2,17 @@
   "name": "osm-geojson",
   "version": "0.6.0",
   "description": "Get GeoJSON of a OpenStreetMap's relation from the API.",
-  "main": "index.js",
-  "dependencies": {
-    "pify": "^3.0.0",
-    "random-int": "^1.0.0",
-    "request": "^2.83.0",
-    "wait-then": "^0.1.2"
+  "license": "MIT",
+  "homepage": "https://github.com/simonepri/osm-geojson#readme",
+  "repository": "github:simonepri/osm-geojson",
+  "bugs": {
+    "url": "https://github.com/simonepri/osm-geojson/issues",
+    "email": "simonepri@outlook.com"
   },
-  "devDependencies": {
-    "ava": "^0.23.0",
-    "codecov": "^3.0.0",
-    "nyc": "^11.3.0",
-    "xo": "^0.19.0"
-  },
-  "scripts": {
-    "test": "xo && ava --verbose",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simonepri/osm-geojson.git"
-  },
-  "author": {
-    "name": "Simone Primarosa",
-    "email": "simone.pri@hotmail.it"
-  },
+  "author": "Simone Primarosa <simonepri@outlook.com> (https://simoneprimarosa.com)",
+  "contributors": [
+    "Simone Primarosa <simonepri@outlook.com> (https://simoneprimarosa.com)"
+  ],
   "keywords": [
     "osm-api",
     "osm-geojson",
@@ -49,12 +35,42 @@
     "geojson",
     "OpenStreetMap"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/simonepri/osm-geojson/issues"
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=6"
   },
-  "homepage": "https://github.com/simonepri/osm-geojson#readme",
+  "scripts": {
+    "test": "xo &&nyc ava",
+    "release": "np",
+    "update": "npm-check -u"
+  },
+  "dependencies": {
+    "pify": "^3.0.0",
+    "random-int": "^1.0.0",
+    "request": "^2.83.0",
+    "wait-then": "^0.1.2"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "np": "*",
+    "npm-check": "*",
+    "nyc": "*",
+    "xo": "*"
+  },
+  "ava": {
+    "verbose": true
+  },
+  "nyc": {
+    "reporter": [
+      "lcovonly",
+      "text"
+    ]
+  },
   "xo": {
+    "prettier": true,
     "space": true
   }
 }
