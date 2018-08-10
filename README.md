@@ -1,5 +1,7 @@
 <h1 align="center">
-  <b>osm-geojson</b>
+  <a href="https://github.com/simonepri/osm-geojson">
+    <img src="./media/osm-geojson.png" alt="osm-geojson" width="340"/>
+  </a>
 </h1>
 <p align="center">
   <!-- CI - TravisCI -->
