@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/simonepri/osm-geojson">
-    <img src="./media/osm-geojson.png" alt="osm-geojson" width="340"/>
+    <img src="https://github.com/simonepri/osm-geojson/raw/master/media/osm-geojson.png" alt="osm-geojson" width="340"/>
   </a>
 </h1>
 <p align="center">
