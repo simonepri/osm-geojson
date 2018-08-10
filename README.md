@@ -1,5 +1,7 @@
 <h1 align="center">
-  <b>osm-geojson</b>
+  <a href="https://github.com/simonepri/osm-geojson">
+    <img src="./media/osm-geojson.png" alt="osm-geojson" width="340"/>
+  </a>
 </h1>
 <p align="center">
   <!-- CI - TravisCI -->
@@ -87,6 +89,24 @@ osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
 // }
 ```
 
+## CLI
+
+```bash
+Usage
+  $ osm-geojson <osmId>
+  $ osm-geojson -l [<osmId>:<filename>]+
+Options
+  -l  --list [<osmId>:<filename>]+   To fetch a list of osmIds. Each relation
+                                     will be saved in a file called
+                                     filename.geojson
+  -p --pretty                        To beautify the outputted JSON.
+Examples
+  $ osm-geojson 365331
+  $ osm-geojson -p 365331
+  $ osm-geojson -p 365331 > filename.geojson
+  $ osm-geojson -l 365331:ita 148838:usa
+```
+
 ## API
 
 <a name="get"></a>
@@ -95,7 +115,7 @@ osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
 Returns the GeoJSON of a particular OSM relation id.
 
 **Returns**: <code>Promise.&lt;object&gt;</code> - A promise that contains the GeoJSON of the given
-relation.  
+relation.
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -107,7 +127,7 @@ relation.
 Returns a map of GeoJSON of multiple OSM relation ids.
 
 **Returns**: <code>Promise.&lt;object&gt;</code> - A promise that contains the map with the same keys
-of the map provided but with the GeoJSON of the given relation id as value.  
+of the map provided but with the GeoJSON of the given relation id as value.
 
 | Param | Type | Description |
 | --- | --- | --- |

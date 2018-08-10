@@ -1,4 +1,6 @@
 import test from 'ava';
+import execa from 'execa';
+import fs from 'fs-extra';
 import m from '.';
 
 test('should return the geojson for a valid relation id', async t => {
@@ -35,4 +37,47 @@ test('should return an empty map with an empty map', async t => {
 test('should return an error for an invalid relation id', async t => {
   const error = await t.throws(m.get('XXX'), Error);
   t.is(error.message, 'Unable to get response for the relation: XXX');
+});
+
+test('should print on stdout with a single osmid in the cli', async t => {
+  const {stdout} = await execa('./cli.js', ['365331']);
+  t.is(JSON.parse(stdout).type, 'GeometryCollection');
+});
+
+test('should create files using the list option in the cli', async t => {
+  const filename = 'test_cli_ita';
+  const path = `./${filename}.geojson`;
+
+  let geojson;
+  await fs.remove(path);
+
+  await execa('./cli.js', ['-l', `365331:${filename}`]);
+  t.is(await fs.pathExists(path), true);
+  geojson = await fs.readJson(path);
+  await fs.remove(path);
+  t.is(geojson.type, 'GeometryCollection');
+
+  await execa('./cli.js', ['--list', '-p', `365331:${filename}`]);
+  t.is(await fs.pathExists(path), true);
+  geojson = await fs.readJson(path);
+  await fs.remove(path);
+  t.is(geojson.type, 'GeometryCollection');
+});
+
+test('should print the help on stdout if the options provided are invalid in the cli', async t => {
+  let result;
+  result = await execa('./cli.js', []);
+  t.regex(result.stdout, /Usage/);
+
+  result = await execa('./cli.js', ['-h']);
+  t.regex(result.stdout, /Usage/);
+
+  result = await execa('./cli.js', ['--help']);
+  t.regex(result.stdout, /Usage/);
+
+  result = await execa('./cli.js', ['invalid']);
+  t.regex(result.stdout, /Usage/);
+
+  result = await execa('./cli.js', ['-l', `invalid:ita`]);
+  t.regex(result.stdout, /Usage/);
 });
