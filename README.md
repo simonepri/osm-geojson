@@ -92,10 +92,12 @@ osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
 ```bash
 Usage
   $ osm-geojson <osmId>
-  $ osm-geojson -l <osmId>:<filename> [<osmId>:<filename>]*
+  $ osm-geojson -l [<osmId>:<filename>]+
 Options
-  -p --pretty                   To beautify the output.
-  -l  --list                    To provide a list of osmId.
+  -l  --list [<osmId>:<filename>]+   To fetch a list of osmIds. Each relation
+                                     will be saved in a file called
+                                     filename.geojson
+  -p --pretty                        To beautify the outputted JSON.
 Examples
   $ osm-geojson 365331
   $ osm-geojson -p 365331

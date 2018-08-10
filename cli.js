@@ -15,12 +15,14 @@ function stringify(geojson, beautify) {
 }
 
 function help() {
-  const help = ` Usage
+  const help = `  Usage
     $ osm-geojson <osmId>
-    $ osm-geojson -l <osmId>:<filename> [<osmId>:<filename>]*
+    $ osm-geojson -l [<osmId>:<filename>]+
   Options
-    -p --pretty                   To beautify the output.
-    -l  --list                    To provide a list of osmId.
+    -l  --list [<osmId>:<filename>]+   To fetch a list of osmIds. Each relation
+                                       will be saved in a file called
+                                       filename.geojson
+    -p --pretty                        To beautify the outputted JSON.
   Examples
     $ osm-geojson 365331
     $ osm-geojson -p 365331
