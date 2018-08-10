@@ -92,7 +92,7 @@ osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
 ## CLI
 
 ### Install
-To use the CLI just install the package as global.
+To use the CLI just install the package globally.
 ```
 $ npm install --g osm-geojson
 ```
