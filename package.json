@@ -1,6 +1,6 @@
 {
   "name": "osm-geojson",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Get GeoJSON of a OpenStreetMap's relation from the API.",
   "license": "MIT",
   "homepage": "https://github.com/simonepri/osm-geojson#readme",
