@@ -87,6 +87,21 @@ osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
 // }
 ```
 
+## CLI
+
+```bash
+Usage
+  $ npx osm-geojson <osmId>
+Options
+  -p --pretty                   To beautify the output.
+  -l --list                     To provide a list of osmId.
+Examples
+  $ npx osm-geojson 365331
+  $ npx osm-geojson -p 365331
+  $ npx osm-geojson -p 365331 >> filename.geojson
+  $ npx osm-geojson -l 365331:ita 148838:usa
+```
+
 ## API
 
 <a name="get"></a>
@@ -112,12 +127,6 @@ of the map provided but with the GeoJSON of the given relation id as value.
 | Param | Type | Description |
 | --- | --- | --- |
 | map | <code>object</code> | Map from a name to a relation id from which extract the GeoJSON. |
-
-## CLI
-
-```
-$ osm-geojson osmid:file.geojson
-```
 
 ## Authors
 
