@@ -91,15 +91,16 @@ osmGeoJson.getAll({'ITA': '365331', 'USA': '148838'}); // Italy
 
 ```bash
 Usage
-  $ npx osm-geojson <osmId>
+  $ osm-geojson <osmId>
+  $ osm-geojson -l <osmId>:<filename> [<osmId>:<filename>]*
 Options
   -p --pretty                   To beautify the output.
-  -l --list                     To provide a list of osmId.
+  -l  --list                    To provide a list of osmId.
 Examples
-  $ npx osm-geojson 365331
-  $ npx osm-geojson -p 365331
-  $ npx osm-geojson -p 365331 >> filename.geojson
-  $ npx osm-geojson -l 365331:ita 148838:usa
+  $ osm-geojson 365331
+  $ osm-geojson -p 365331
+  $ osm-geojson -p 365331 > filename.geojson
+  $ osm-geojson -l 365331:ita 148838:usa
 ```
 
 ## API

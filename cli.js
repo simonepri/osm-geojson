@@ -17,13 +17,14 @@ function stringify(geojson, beautify) {
 function help() {
   const help = ` Usage
     $ osm-geojson <osmId>
+    $ osm-geojson -l <osmId>:<filename> [<osmId>:<filename>]*
   Options
     -p --pretty                   To beautify the output.
     -l  --list                    To provide a list of osmId.
   Examples
     $ osm-geojson 365331
     $ osm-geojson -p 365331
-    $ osm-geojson -p 365331 >> filename.geojson
+    $ osm-geojson -p 365331 > filename.geojson
     $ osm-geojson -l 365331:ita 148838:usa
 `;
   console.log(help);
@@ -34,12 +35,12 @@ function help() {
 function list(osmidmap, beautify) {
   const promises = [];
 
-  for (const country of Object.keys(osmidmap)) {
+  for (const name of Object.keys(osmidmap)) {
     promises.push(
       osmGeoJson
-        .get(osmidmap[country])
+        .get(osmidmap[name])
         .then(geojson =>
-          pify(fs.writeFile)(country + '.geojson', stringify(geojson, beautify))
+          pify(fs.writeFile)(name + '.geojson', stringify(geojson, beautify))
         )
     );
   }
@@ -59,6 +60,10 @@ function run() {
   // Parse flags
   process.argv.slice(2).forEach(arg => {
     switch (arg) {
+      case '-h':
+      case '--help':
+        argv.help = true;
+        break;
       case '-p':
       case '--pretty-print':
         argv.beautify = true;
@@ -98,8 +103,8 @@ function run() {
       if (argv.list) {
         const map = {};
         argv._.forEach(arg => {
-          const [osmid, country] = arg.split(':');
-          map[country] = osmid;
+          const [osmid, name] = arg.split(':');
+          map[name] = osmid;
         });
         return list(map, argv.beautify);
       }
