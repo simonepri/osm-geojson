@@ -61,7 +61,7 @@
   "devDependencies": {
     "ava": "*",
     "execa": "^1.0.0",
-    "fs-extra": "^7.0.0",
+    "fs-extra": "^8.0.0",
     "np": "*",
     "npm-check": "*",
     "nyc": "*",
