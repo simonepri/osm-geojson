@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "ava": "*",
-    "execa": "^1.0.0",
+    "execa": "^3.2.0",
     "fs-extra": "^7.0.0",
     "np": "*",
     "npm-check": "*",
