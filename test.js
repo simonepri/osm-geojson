@@ -35,7 +35,7 @@ test('should return an empty map with an empty map', async t => {
 });
 
 test('should return an error for an invalid relation id', async t => {
-  const error = await t.throws(m.get('XXX'), Error);
+  const error = await t.throwsAsync(m.get('XXX'), Error);
   t.is(error.message, 'Unable to get response for the relation: XXX');
 });
 

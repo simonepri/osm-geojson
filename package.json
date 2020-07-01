@@ -48,9 +48,10 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo &&nyc ava",
-    "release": "np",
-    "update": "npm-check -u"
+    "lint": "xo",
+    "test": "nyc ava",
+    "release": "npx np",
+    "update": "npx npm-check -u"
   },
   "dependencies": {
     "pify": "^4.0.0",
@@ -59,13 +60,11 @@
     "wait-then": "^0.1.2"
   },
   "devDependencies": {
-    "ava": "*",
+    "ava": "^1.4.1",
     "execa": "^1.0.0",
-    "fs-extra": "^7.0.0",
-    "np": "*",
-    "npm-check": "*",
-    "nyc": "*",
-    "xo": "*"
+    "fs-extra": "^8.1.0",
+    "nyc": "^14.1.1",
+    "xo": "~0.24.0"
   },
   "ava": {
     "verbose": true
@@ -78,6 +77,10 @@
   },
   "xo": {
     "prettier": true,
-    "space": true
+    "space": true,
+    "rules": {
+      "prefer-destructuring": 0,
+      "import/no-unresolved": 0
+    }
   }
 }

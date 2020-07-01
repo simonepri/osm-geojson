@@ -11,6 +11,7 @@ function stringify(geojson, beautify) {
   if (beautify) {
     return JSON.stringify(geojson, null, 2);
   }
+
   return JSON.stringify(geojson);
 }
 
@@ -79,6 +80,7 @@ function run() {
         if (!arg.startsWith('-')) {
           argv._.push(arg);
         }
+
         break;
     }
   });
@@ -102,6 +104,7 @@ function run() {
       if (argv.help) {
         return help();
       }
+
       if (argv.list) {
         const map = {};
         argv._.forEach(arg => {
@@ -110,11 +113,12 @@ function run() {
         });
         return list(map, argv.beautify);
       }
+
       const osmid = argv._[0];
       return get(osmid, argv.beautify);
     })
-    .catch(err => {
-      console.error('\n❌ ' + err);
+    .catch(error => {
+      console.error('\n❌ ' + error);
     });
 }
 

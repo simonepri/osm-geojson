@@ -4,14 +4,40 @@
   </a>
 </p>
 <p align="center">
-  <!-- CI - TravisCI -->
-  <a href="https://travis-ci.com/simonepri/osm-geojson">
-    <img src="https://img.shields.io/travis/com/simonepri/osm-geojson/master.svg?label=MacOS%20%26%20Linux" alt="Mac/Linux Build Status" />
+  <!-- Version - npm -->
+  <a href="https://www.npmjs.com/package/osm-geojson">
+    <img src="https://img.shields.io/npm/v/osm-geojson.svg" alt="Latest version on npm" />
   </a>
-  <!-- CI - AppVeyor -->
-  <a href="https://ci.appveyor.com/project/simonepri/osm-geojson">
-    <img src="https://img.shields.io/appveyor/ci/simonepri/osm-geojson/master.svg?label=Windows" alt="Windows Build status" />
+  <!-- Downloads - npm -->
+  <a href="https://npm-stat.com/charts.html?package=osm-geojson">
+    <img src="https://img.shields.io/npm/dt/osm-geojson.svg" alt="Downloads on npm" />
   </a>
+  <!-- License - MIT -->
+  <a href="https://github.com/simonepri/osm-geojson/tree/master/license">
+    <img src="https://img.shields.io/github/license/simonepri/osm-geojson.svg" alt="Project license" />
+  </a>
+
+  <br/>
+
+  <!-- Lint -->
+  <a href="https://github.com/simonepri/osm-geojson/actions?query=workflow:lint+branch:master">
+    <img src="https://github.com/simonepri/osm-geojson/workflows/lint/badge.svg?branch=master" alt="Lint status" />
+  </a>
+  <!-- Test - macOS -->
+  <a href="https://github.com/simonepri/osm-geojson/actions?query=workflow:test-macos+branch:master">
+    <img src="https://github.com/simonepri/osm-geojson/workflows/test-macos/badge.svg?branch=master" alt="Test macOS status" />
+  </a>
+  <!-- Test - Ubuntu -->
+  <a href="https://github.com/simonepri/osm-geojson/actions?query=workflow:test-ubuntu+branch:master">
+    <img src="https://github.com/simonepri/osm-geojson/workflows/test-ubuntu/badge.svg?branch=master" alt="Test Ubuntu status" />
+  </a>
+  <!-- Test - Windows -->
+  <a href="https://github.com/simonepri/osm-geojson/actions?query=workflow:test-windows+branch:master">
+    <img src="https://github.com/simonepri/osm-geojson/workflows/test-windows/badge.svg?branch=master" alt="Test Windows status" />
+  </a>
+
+  <br/>
+
   <!-- Coverage - Codecov -->
   <a href="https://codecov.io/gh/simonepri/osm-geojson">
     <img src="https://img.shields.io/codecov/c/github/simonepri/osm-geojson/master.svg" alt="Codecov Coverage report" />
@@ -46,17 +72,6 @@
   <!-- Release - np -->
   <a href="https://github.com/sindresorhus/np">
     <img src="https://img.shields.io/badge/released_with-np-6c8784.svg" alt="NP Release System used" />
-  </a>
-
-  <br/>
-
-  <!-- Version - npm -->
-  <a href="https://www.npmjs.com/package/osm-geojson">
-    <img src="https://img.shields.io/npm/v/osm-geojson.svg" alt="Latest version on npm" />
-  </a>
-  <!-- License - MIT -->
-  <a href="https://github.com/simonepri/osm-geojson/tree/master/license">
-    <img src="https://img.shields.io/github/license/simonepri/osm-geojson.svg" alt="Project license" />
   </a>
 </p>
 <p align="center">

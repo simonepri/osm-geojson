@@ -50,12 +50,14 @@ function getGeoJson(osmid) {
           );
           return;
         }
+
         if (response.statusCode !== 200) {
           getGeoJson(osmid)
             .then(resolve)
             .catch(reject);
           return;
         }
+
         try {
           const geojson = JSON.parse(response.body);
           resolve(geojson);
@@ -72,6 +74,7 @@ function getGeoJson(osmid) {
       });
   });
 }
+
 /**
  * Returns a map of GeoJSON of multiple OSM relation ids.
  * @public
