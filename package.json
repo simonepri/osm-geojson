@@ -54,9 +54,9 @@
     "update": "npx npm-check -u"
   },
   "dependencies": {
-    "pify": "^4.0.0",
+    "pify": "^4.0.1",
     "random-int": "^1.0.0",
-    "request": "^2.87.0",
+    "request": "^2.88.0",
     "wait-then": "^0.1.2"
   },
   "devDependencies": {
