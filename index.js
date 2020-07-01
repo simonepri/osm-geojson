@@ -19,7 +19,7 @@ let last = null;
  */
 function getGeoJson(osmid) {
   const opts = {
-    url: API_GET_GEO + osmid
+    url: API_GET_GEO + osmid,
   };
 
   if (last === null) {
@@ -107,5 +107,5 @@ function getAllGeoJson(map) {
 
 module.exports = {
   get: getGeoJson,
-  getAll: getAllGeoJson
+  getAll: getAllGeoJson,
 };

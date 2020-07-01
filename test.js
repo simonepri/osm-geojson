@@ -12,7 +12,7 @@ test('should return the geojson for a valid relation id', async t => {
 test('should return a map of geojson for a valid map of relation ids', async t => {
   const map = {
     ITA: '365331',
-    USA: '148838'
+    USA: '148838',
   };
   const geojsonMap = await m.getAll(map);
 
