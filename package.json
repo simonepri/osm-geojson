@@ -79,8 +79,7 @@
     "prettier": true,
     "space": true,
     "rules": {
-      "prefer-destructuring": 0,
-      "import/no-unresolved": 0
+      "prefer-destructuring": "off"
     }
   }
 }
