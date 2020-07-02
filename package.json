@@ -60,7 +60,7 @@
     "wait-then": "^0.1.2"
   },
   "devDependencies": {
-    "ava": "^1.4.1",
+    "ava": "^3.9.0",
     "execa": "^1.0.0",
     "fs-extra": "^8.1.0",
     "nyc": "^14.1.1",
